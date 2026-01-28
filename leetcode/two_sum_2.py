@@ -7,7 +7,7 @@ def twoSum(numbers, target):
         pointer = 0
         while pointer <= len(numbers) - 1:
             if dictionary.get(target - numbers[pointer]) is not None:
-                return [pointer + 1, dictionary[target - numbers[pointer]] + 1]
+                return [dictionary[target - numbers[pointer]] + 1, pointer + 1]
             else:
                 dictionary[numbers[pointer]] = pointer
             pointer += 1
